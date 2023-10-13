@@ -1,0 +1,19 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+   <form action="" method="POST">{% csrf_token %}
+    <div style="width: 50%; margin: auto; color: white;">
+        <!-- {% if messages %}
+            {% for mensaje in messages %}
+                {{mensaje}}
+            {% endfor %}
+        {% endif %} -->
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success" value="">Iniciar Sesion</button>
+    </div>
+   </form>
+{% endblock %}
